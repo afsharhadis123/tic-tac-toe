@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="./style.css" class="">
+</head>
+<body>
+    <h1>Tic Tac Toe</h1>
+    <div id="board">
+		<div class="row">
+			<div class="square" id="0"></div>
+			<div class="square" id="1"></div>
+			<div class="square" id="2"></div>
+		</div>
+		<div class="row">
+			<div class="square" id="3"></div>
+			<div class="square" id="4"></div>
+			<div class="square" id="5"></div>
+		</div>
+		<div class="row">
+			<div class="square" id="6"></div>
+			<div class="square" id="7"></div>
+			<div class="square" id="8"></div>
+		</div>
+	</div>
+    <button id="reset">Reset</button> 
+    <h2 id="winner"></h2>
+</body>
+<script>
+ var playerX = "X";
+    var playerO = "O";
+//     let board = ["", "", "", "", "", "", "", ""]
+
+  const board = document.querySelector('#board');
+  const resetButton = document.querySelector('#reset');
+  const winner = document.querySelector('#winner');
+  
+  let gameEnd = false;
+  let currentPlayer = 'X';
+
+  // Add a click event listener to each square
+  const squares = document.querySelectorAll('.square');
+  for (let i = 0; i < squares.length; i++) {
+    squares[i].addEventListener('click', function() {
+      if (gameEnd) {
+        return;
+      }
+    }
+    )};
+    for (let i = 0; i < squares.length; i++) {
+  squares[i].addEventListener('click', function() {
+    // Check if the square is already occupied or the game is over
+    if (squares[i].textContent !== '' || gameEnded) {
+      return;
+    }
+    
+    function checkWinner() {
+  // Check rows
+  for (let i = 0; i < 9; i += 3) {
+    if (squares[i].textContent === currentPlayer
+      && squares[i + 1].textContent === currentPlayer
+      && squares[i + 2].textContent === currentPlayer) {
+      return true;
+    }
+  }
+  // Check columns
+  for (let i = 0; i < 3; i++) {
+    if (squares[i].textContent === currentPlayer
+      && squares[i + 3].textContent === currentPlayer
+      && squares[i + 6].textContent === currentPlayer) {
+      return true;
+    }
+  }
+  // Check diagonals
+  if (squares[0].textContent === currentPlayer
+    && squares[4].textContent === currentPlayer
+    && squares[8].textContent === currentPlayer) {
+    return true;
+  }
+  if (squares[2].textContent === currentPlayer
+    && squares[4].textContent === currentPlayer
+    && squares[6].textContent === currentPlayer) {
+    return true;
+  }
+  return false;
+}
+
+    
+    
+//     // Switch to the other player
+//     if (currentPlayer === 'X') {
+//       currentPlayer = 'O';
+//     } else {
+//       currentPlayer = 'X';
+//     }
+//   });
+// }
+</script>
+</html>

@@ -1,0 +1,28 @@
+#board {
+    display: inline-block;
+    margin: 20px;
+}
+.square {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    font-size: 72px;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+
+}
+.square:hover {
+    background-color: #eee;
+}
+
+.row {
+    display: flex;
+}
+
+
+button:hover {
+    cursor: pointer;
+    background: green;
+    color: white;
+  }
