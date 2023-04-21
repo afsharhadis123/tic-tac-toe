@@ -44,14 +44,19 @@ for (let i = 0; i < squares.length; i++) {
       // board[square.id] = currentPlayer;
     
     var checkWin = ['X','O']
-  if (currentPlayer === 'X') {
+    // if (checkWin()) {
+    //     winnerElement.textContent = currentPlayer + ' is the winner!';
+    //   } else if (board.indexOf('') === -1) {
+    //     winnerElement.textContent = 'Tie game!';
+    //   } else if (currentPlayer === 'X') {
+      if (currentPlayer === 'X') {
     currentPlayer = 'O';
   } else {
     currentPlayer = 'X';
   }
     }
-  } 
- )};
+    }
+  )};
 
 function checkWin() {
   var winner = [
@@ -61,11 +66,11 @@ function checkWin() {
   ];
 
 var combination = winner
- var a = board[combination[0]];
- var b = board[combination[1]];
- var c = board[combination[2]];
-//  var[a,b,c] = combination
-if (a !== '' && a === b && b === c) {
+//  var a = board[combination[0]];
+//  var b = board[combination[1]];
+//  var c = board[combination[2]];
+ var [a, b, c] = combination;
+      if (board[a] !== '' && board[a] === board[b] && board[b] === board[c]) {
       return true;
       console.log(currentPlayer + 'you are winner')
     }
@@ -78,7 +83,15 @@ if (a !== '' && a === b && b === c) {
 //     }
 //   }
 //   return false;
-
+const resetButton = document.querySelector('#reset');
+  resetButton.addEventListener('click', function() {
+    for (let i = 0; i < squares.length; i++) {
+      squares[i].textContent = '';
+      board[i] = '';
+    }
+    document.querySelector('#winner').textContent = '';
+    currentPlayer = playerX;
+  });
 
 </script>
 </html>
