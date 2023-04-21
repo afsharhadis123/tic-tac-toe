@@ -28,6 +28,7 @@
 	</div>
     <button id="reset">Reset</button> 
     <h2 id="winner"></h2>
+    
 </body>
 <script>
  var playerX = "X";
@@ -35,7 +36,7 @@
     let board = ["", "", "", "", "", "", "", ""]
 
     const squares = document.querySelectorAll('.square');
-    var currentPlayer = "X";
+    var currentPlayer = playerX ;
 for (let i = 0; i < squares.length; i++) {
   squares[i].addEventListener('click', function(event) {
     var square = event.target;
@@ -44,10 +45,10 @@ for (let i = 0; i < squares.length; i++) {
     
     // var checkWin = ['X','O']
   checkWin()
-   if (currentPlayer === 'X') {
-    currentPlayer = 'O';
+   if (currentPlayer === playerX) {
+    currentPlayer = playerO ;
   } else {
-    currentPlayer = 'X';
+    currentPlayer = playerX ;
   }
     }
     }
@@ -66,22 +67,64 @@ for (let i = 0; i < squares.length; i++) {
         squares[a].textContent === squares[b].textContent &&
         squares[b].textContent === squares[c].textContent
     ) {
-      console.log(currentPlayer + " wins!");
       
+
+      var winnerMessage = currentPlayer + '  wins! ';
+      document.querySelector('#winner').textContent = winnerMessage;
+      return;
     }
   }
-}
 
+      var boardFull = true;
+      for (var i=0; i < squares.length; i++) {
+    if (squares[i].textContent === "") {
+      boardFull = false;
+    }
+  }
+    // if (boardFull){
+      var tieGame = boardFull + ' Tie game! ';
+      document.querySelector('#winner').textContent = tieGame;
+      return;
+   
+      // resetGame();
+    }
+  // }
+ 
+//  let boardFull = true;
+//   for (let i = 0; i < squares.length; i++) {
+//     if (cells[i].textContent === "") {
+//       boardFull = false;
+//       // break;
+//     }
+//   }
+//   if (boardFull) {
+//     console.log("Tie game!");
+//     resetGame();
+//   }
+// }
+// function resetGame() {
+//   for (let i = 0; i < squares.length; i++) {
+//     squares[i].textContent = "";
+//     squares[i].classList.remove("x", "o");
+//   }
+//   currentPlayer = "x";
+// }
 
 var resetButton = document.querySelector('#reset');
   resetButton.addEventListener('click', function() {
     for (let i = 0; i < squares.length; i++) {
       squares[i].textContent = '';
-      board[i] = '';
+      // board[i] = '';
     }
     // document.querySelector('#winner').textContent = '';
     // currentPlayer = playerX;
   });
-//  
+//   function resetGame() {
+//   for (let i = 0; i < squares.length; i++) {
+//     squares[i].textContent = "";
+//     squares[i].classList.remove("x", "o");
+//   }
+//   currentPlayer = "x";
+// }
 </script>
 </html>
