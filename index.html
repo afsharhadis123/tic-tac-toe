@@ -41,15 +41,10 @@ for (let i = 0; i < squares.length; i++) {
     var square = event.target;
     if(square.textContent === ''){
       square.textContent = currentPlayer 
-      // board[square.id] = currentPlayer;
     
-    var checkWin = ['X','O']
-    // if (checkWin()) {
-    //     winnerElement.textContent = currentPlayer + ' is the winner!';
-    //   } else if (board.indexOf('') === -1) {
-    //     winnerElement.textContent = 'Tie game!';
-    //   } else if (currentPlayer === 'X') {
-      if (currentPlayer === 'X') {
+    // var checkWin = ['X','O']
+  checkWin()
+   if (currentPlayer === 'X') {
     currentPlayer = 'O';
   } else {
     currentPlayer = 'X';
@@ -58,40 +53,35 @@ for (let i = 0; i < squares.length; i++) {
     }
   )};
 
-function checkWin() {
-  var winner = [
-    [0, 1, 2], [3, 4, 5], [6, 7, 8], // horizontal
+  function checkWin() {
+  var winner = [  
+     [0, 1, 2], [3, 4, 5], [6, 7, 8], // horizontal
     [0, 3, 6], [1, 4, 7], [2, 5, 8], // vertical
     [0, 4, 8], [2, 4, 6] // diagonal
   ];
 
-var combination = winner
-//  var a = board[combination[0]];
-//  var b = board[combination[1]];
-//  var c = board[combination[2]];
- var [a, b, c] = combination;
-      if (board[a] !== '' && board[a] === board[b] && board[b] === board[c]) {
-      return true;
-      console.log(currentPlayer + 'you are winner')
+  for (let i = 0; i < winner.length; i++) {
+    const [a, b, c] = winner[i];
+    if (squares[a].textContent !== "" &&
+        squares[a].textContent === squares[b].textContent &&
+        squares[b].textContent === squares[c].textContent
+    ) {
+      console.log(currentPlayer + " wins!");
+      
     }
-  return false;
-
+  }
 }
-//  if (a === '' || b === '' || c === '') {
-//   if (board[a] !== '' && board[a] === board[b] && board[b] === board[c]) {
-//       return true;
-//     }
-//   }
-//   return false;
-const resetButton = document.querySelector('#reset');
+
+
+var resetButton = document.querySelector('#reset');
   resetButton.addEventListener('click', function() {
     for (let i = 0; i < squares.length; i++) {
       squares[i].textContent = '';
       board[i] = '';
     }
-    document.querySelector('#winner').textContent = '';
-    currentPlayer = playerX;
+    // document.querySelector('#winner').textContent = '';
+    // currentPlayer = playerX;
   });
-
+//  
 </script>
 </html>
