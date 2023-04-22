@@ -28,7 +28,7 @@
 	</div>
     <button id="reset">Reset</button> 
     <h2 id="winner"></h2>
-    
+ 
 </body>
 <script>
   var playerX = "X";
@@ -83,41 +83,33 @@ function checkWin() {
   if (board[2] !== "" && board[2] === board[4] && board[4] === board[6]) {
     winner = board[2];
   }
+  if (winner !== null) {
+    document.getElementById("winner").textContent = "Player " + winner + " wins!";
+  }
   // check for tie
   var tie = true;
-  for (var i = 0; i < board.length; i++) {
-    if (board[i] === "") {
-      tie = false;
-      break;
-    }
+for (var i = 0; i < board.length; i++) {
+  if (board[i] === "") {
+    tie = false;
+    break;
   }
-//   if (tie) {
-//     winner = "Tie";
-//   }
-//   if (winner !== null) {
-//     document.getElementById("winner").textContent = "Player " + winner + " wins!";
-//   }
 }
-// const resetButton = document.getElementById("reset");
-// resetButton.addEventListener("click", function() {
-//   board = ["", "", "", "", "", "", "", "", ""];
-//   winner = null;
-//   for (let i = 0; i < squares.length; i++) {
-//     squares[i].textContent = "";
-//   }
-//   document.getElementById("winner").textContent = "";
-// });
+if (tie && winner === null) {
+  document.getElementById("winner").textContent = "Tie, Try again!";
+}
+}
+ 
+const resetButton = document.getElementById("reset");
+resetButton.addEventListener("click", function() {
+  board = ["", "", "", "", "", "", "", "", ""];
+  winner = null;
+  for (let i = 0; i < squares.length; i++) {
+    squares[i].textContent = "";
+  }
+  document.getElementById("winner").textContent = "";
+});
 
-// function resetBoard() {
-//   board = ["", "", "", "", "", "", "", "", ""];
-//   winner = null;
-//   for (var i = 0; i < squares.length; i++) {
-//     squares[i].textContent = "";
-//   }
-// }
-// resetButton.addEventListener("click", function() {
-//   resetBoard();
-// });
+
 
 </script>
 </html>
