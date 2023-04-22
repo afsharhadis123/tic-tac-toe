@@ -83,7 +83,7 @@ function checkWin() {
   if (board[2] !== "" && board[2] === board[4] && board[4] === board[6]) {
     winner = board[2];
   }
-  
+ 
 }
 const resetButton = document.getElementById("reset");
 resetButton.addEventListener("click", function() {
@@ -94,8 +94,6 @@ resetButton.addEventListener("click", function() {
   }
   document.getElementById("winner").textContent = "";
 });
-
-// 
 
 </script>
 </html>
