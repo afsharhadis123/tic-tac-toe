@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./style.css" class="">
 </head>
 <body>
-
     <h1>Tic Tac Toe</h1>
     <div id="board">
 		<div class="row">
@@ -84,17 +83,41 @@ function checkWin() {
   if (board[2] !== "" && board[2] === board[4] && board[4] === board[6]) {
     winner = board[2];
   }
- 
-}
-const resetButton = document.getElementById("reset");
-resetButton.addEventListener("click", function() {
-  board = ["", "", "", "", "", "", "", "", ""];
-  winner = null;
-  for (let i = 0; i < squares.length; i++) {
-    squares[i].textContent = "";
+  // check for tie
+  var tie = true;
+  for (var i = 0; i < board.length; i++) {
+    if (board[i] === "") {
+      tie = false;
+      break;
+    }
   }
-  document.getElementById("winner").textContent = "";
-});
+//   if (tie) {
+//     winner = "Tie";
+//   }
+//   if (winner !== null) {
+//     document.getElementById("winner").textContent = "Player " + winner + " wins!";
+//   }
+}
+// const resetButton = document.getElementById("reset");
+// resetButton.addEventListener("click", function() {
+//   board = ["", "", "", "", "", "", "", "", ""];
+//   winner = null;
+//   for (let i = 0; i < squares.length; i++) {
+//     squares[i].textContent = "";
+//   }
+//   document.getElementById("winner").textContent = "";
+// });
+
+// function resetBoard() {
+//   board = ["", "", "", "", "", "", "", "", ""];
+//   winner = null;
+//   for (var i = 0; i < squares.length; i++) {
+//     squares[i].textContent = "";
+//   }
+// }
+// resetButton.addEventListener("click", function() {
+//   resetBoard();
+// });
 
 </script>
 </html>
