@@ -2,10 +2,11 @@
 
  <h1>  My project summery : </h1>
 
- !(https://images.unsplash.com/photo-1668901382969-8c73e450a1f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80)
+<img src="https://images.unsplash.com/photo-1668901382969-8c73e450a1f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="tic-tac-toe" class="">
   
 <h2> 🙋‍♀️ Do you want play with me [click here!](http://https://afsharhadis123.github.io/tic-tac-toe/)? </h2>
----
+
+-----------------------------------------------------------------------------------------------------------
 
 <h1> 📝 what is my plan : </h1> 
 
@@ -18,7 +19,7 @@
 - game reset.
 - winner message !
 
-![ALT_TEXT](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.shiksha.com%2Fonline-courses%2Fwhat-is-project-manager-dg495&psig=AOvVaw1Sa5HUgjvulwaZ9BQYfGBP&ust=1682250795988000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOikvtq2vf4CFQAAAAAdAAAAABAs)
+  <img src=https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80 alt="project-plan" class="">
 
 
 
