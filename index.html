@@ -31,100 +31,71 @@
     
 </body>
 <script>
- var playerX = "X";
-    var playerO = "O";
-    let board = ["", "", "", "", "", "", "", ""]
+  var playerX = "X";
+var playerO = "O";
+var winner = null;
+let board = ["", "", "", "", "", "", "", "", ""];
 
-    const squares = document.querySelectorAll('.square');
-    var currentPlayer = playerX ;
+const squares = document.querySelectorAll('.square');
+var currentPlayer = playerX;
+
 for (let i = 0; i < squares.length; i++) {
-  squares[i].addEventListener('click', function(event) {
-    var square = event.target;
-    if(square.textContent === ''){
-      square.textContent = currentPlayer 
-    
-    // var checkWin = ['X','O']
-  checkWin()
-   if (currentPlayer === playerX) {
-    currentPlayer = playerO ;
-  } else {
-    currentPlayer = playerX ;
-  }
-    }
-    }
-  )};
-
-  function checkWin() {
-  var winner = [  
-     [0, 1, 2], [3, 4, 5], [6, 7, 8], // horizontal
-    [0, 3, 6], [1, 4, 7], [2, 5, 8], // vertical
-    [0, 4, 8], [2, 4, 6] // diagonal
-  ];
-
-  for (let i = 0; i < winner.length; i++) {
-    const [a, b, c] = winner[i];
-    if (squares[a].textContent !== "" &&
-        squares[a].textContent === squares[b].textContent &&
-        squares[b].textContent === squares[c].textContent
-    ) {
-      
-
-      var winnerMessage = currentPlayer + '  wins! ';
-      document.querySelector('#winner').textContent = winnerMessage;
+  squares[i].addEventListener('click', function() {
+    if (board[i] !== '' || winner !== null) {
       return;
     }
-  }
-
-      var boardFull = true;
-      for (var i=0; i < squares.length; i++) {
-    if (squares[i].textContent === "") {
-      boardFull = false;
+    board[i] = currentPlayer;
+    document.getElementById(i).textContent = currentPlayer;
+    checkWin();
+    if (currentPlayer === playerX) {
+      currentPlayer = playerO;
+    } else {
+      currentPlayer = playerX;
     }
-  }
-    // if (boardFull){
-      var tieGame = boardFull + ' Tie game! ';
-      document.querySelector('#winner').textContent = tieGame;
-      return;
-   
-      // resetGame();
-    }
-  // }
- 
-//  let boardFull = true;
-//   for (let i = 0; i < squares.length; i++) {
-//     if (cells[i].textContent === "") {
-//       boardFull = false;
-//       // break;
-//     }
-//   }
-//   if (boardFull) {
-//     console.log("Tie game!");
-//     resetGame();
-//   }
-// }
-// function resetGame() {
-//   for (let i = 0; i < squares.length; i++) {
-//     squares[i].textContent = "";
-//     squares[i].classList.remove("x", "o");
-//   }
-//   currentPlayer = "x";
-// }
-
-var resetButton = document.querySelector('#reset');
-  resetButton.addEventListener('click', function() {
-    for (let i = 0; i < squares.length; i++) {
-      squares[i].textContent = '';
-      // board[i] = '';
-    }
-    // document.querySelector('#winner').textContent = '';
-    // currentPlayer = playerX;
   });
-//   function resetGame() {
-//   for (let i = 0; i < squares.length; i++) {
-//     squares[i].textContent = "";
-//     squares[i].classList.remove("x", "o");
-//   }
-//   currentPlayer = "x";
-// }
+}
+
+function checkWin() {
+  // check rows
+  if (board[0] !== "" && board[0] === board[1] && board[1] === board[2]) {
+    winner = board[0];
+  }
+  if (board[3] !== "" && board[3] === board[4] && board[4] === board[5]) {
+    winner = board[3];
+  }
+  if (board[6] !== "" && board[6] === board[7] && board[7] === board[8]) {
+    winner = board[6];
+  }
+  // check columns
+  if (board[0] !== "" && board[0] === board[3] && board[3] === board[6]) {
+    winner = board[0];
+  }
+  if (board[1] !== "" && board[1] === board[4] && board[4] === board[7]) {
+    winner = board[1];
+  }
+  if (board[2] !== "" && board[2] === board[5] && board[5] === board[8]) {
+    winner = board[2];
+  }
+  // check diagonals
+  if (board[0] !== "" && board[0] === board[4] && board[4] === board[8]) {
+    winner = board[0];
+  }
+  if (board[2] !== "" && board[2] === board[4] && board[4] === board[6]) {
+    winner = board[2];
+  }
+  
+}
+const resetButton = document.getElementById("reset");
+resetButton.addEventListener("click", function() {
+  board = ["", "", "", "", "", "", "", "", ""];
+  winner = null;
+  for (let i = 0; i < squares.length; i++) {
+    squares[i].textContent = "";
+  }
+  document.getElementById("winner").textContent = "";
+});
+
+// 
+
 </script>
 </html>
