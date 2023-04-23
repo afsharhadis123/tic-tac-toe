@@ -2,7 +2,7 @@
 
 <img src="https://plus.unsplash.com/premium_photo-1671493286804-92cbe5ed1b6c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="tic-tac-toe" class="img1">
   
-<h2> 🙋‍♀️ Do you want to have fun ...?<a href="http://https://afsharhadis123.github.io/tic-tac-toe/" class="">  💻 click here !</a> to see my live project!</h2>
+<h2> 🙋‍♀️ Do you want to have fun ...?<a href="http://https://afsharhadis123.github.io/tic-tac-toe/" class="">  💻 click here</a> to see my live project</h2>
 
 -----------------------------------------------------------------------------------------------------------
 
