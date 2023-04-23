@@ -2,13 +2,13 @@
 
  <h1>  My project summery : </h1>
 
-<img src="https://images.unsplash.com/photo-1668901382969-8c73e450a1f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="tic-tac-toe" class="">
+<img src="https://plus.unsplash.com/premium_photo-1671493286804-92cbe5ed1b6c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="tic-tac-toe" class="img1">
   
-<h2> 🙋‍♀️ Do you want to have fun ...<a href="http://https://afsharhadis123.github.io/tic-tac-toe/" class=""> click here !</a> ? </h2>
+<h2> 🙋‍♀️ Do you want to have fun ...<a href="http://https://afsharhadis123.github.io/tic-tac-toe/" class="">  💻 click here !</a> ? </h2>
 
 -----------------------------------------------------------------------------------------------------------
 
-<h1> 📝 What should I do!? : </h1> 
+<h1> 📝 About : </h1> 
 
 <h3> 💰 My keywords :<h3>
 
@@ -20,11 +20,7 @@
 - Winner message!
 - Reset button. 
 
-<h2> ✏ My plan's steps :</h2>
-
-<img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80" alt="" class="">
-
-
+<h2> ✏ My planning :</h2>
  -  [X] First, I define three variables: playerX, playerO, and winner. playerX and playerO represent the X and O players respectively, and winner is who win the game.
 
  -  [X] I also define an array called board that represents of the Tic Tac Toe board. Each element of the board array represents a square on the board, and is firstly set to an empty string.
@@ -37,22 +33,48 @@
 
  -  [X] If the square has not already been clicked and the game has not been won, the function sets the value of the clicked square to the currentPlayer (board[i] = currentPlayer;), and displays the currentPlayer's symbol in the square (document.getElementById(i).textContent = currentPlayer;).
 
- -  [X] The function then calls the checkWin function to check if the currentPlayer has won the game.
+ -  [X] The function then calls the checkWin function to check if the currentPlayer has won the game. (It was really challenging part 😱)
 
- -  [X] If the currentPlayer has won the game, a consol is shown to call the winner (consol.log("Player " + winner + " wins!");), and the winner variable is set to the value of the currentPlayer.
-
- <img src="https://images.unsplash.com/photo-1578269174936-2709b6aeb913?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="" class="">
+ -  [X] If the currentPlayer has won the game, a consol is shown to call the 🏆 winner (consol.log("Player " + winner  + " wins!");), and the winner variable is set to the value of the currentPlayer.
 
  -  [X] If the game has not been won, the currentPlayer is switched to the other player.
 
- -  [X] The checkWin function checks if the game has been won by checking all possible winning combinations on the board. If a winning combination is found, the function sets the winner variable to the symbol of the winning player (winner = board[i];).
+ -  [X] The checkWin function checks if the game has been won by checking all possible winning combinations on the board. If a winning combination is found, the function sets the winner variable to the symbol of the winning player (winner = board[i];).( 😭 I stock in this step for a day)
 
- -  [X] If no winning combination is found and there are no empty squares left on the board, the function sets the winner variable to "tie".
+ -  [X] If no winning combination is found and there are no empty squares left on the board, the function sets the winner variable to "tie".(I had a 💩 bug in there but I fixed it)
 
  -  [X] The resetGame function is called when the "Reset" button is clicked. This function sets the winner variable to null, resets the board array to an array of empty strings, and sets the textContent of all the squares on the board to an empty string (squares[i].textContent = '';).
 
+<img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80" alt="" class="img2">
 
-    <img src="https://plus.unsplash.com/premium_photo-1671493286804-92cbe5ed1b6c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="end" class="">
+<h3> 🚀 Cool tech </h3>
+
+ - JavaScript
+ - HTML 
+ - CSS
+ - Animation for changing text color
+ 
+
+<h3> 😱 Bugs to fix 💩 </h3>
+
+ - The checkWin function should be changed. It doesn't stop after a player won.
+ - The winner loop to be changed. 
+ - The winning combination doesn't stop when all squares are filled.
+
+
+<h3> 😭 Lessons learnt </h3> 
+ <p> I have learnt to use open and close brackets at the right place. For example, in checkWin function I couldn't get the right answer because I closed the loop early.</p>
+
+ <p> Use return; for breaking tie loop. It was challenging for me.</p>
+
+
+ <h3> ✅  Future features </h3>
+ 
+  - Add computer as second player
+  - Use more animation
+
+
+
 
 
 
