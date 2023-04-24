@@ -19,7 +19,8 @@
 - Winner message!
 - Reset button. 
 
-<img src="image/2023-04-24 (1).png"alt="plan" class="">
+![2023-04-24 (1)](https://user-images.githubusercontent.com/129059226/233876900-f2162871-b01d-4537-ac65-fc3a0b8083a5.png)
+
 
 <h2> ✏ My planning :</h2>
 
