@@ -8,7 +8,7 @@
 
 <h1> 📝 About : </h1> 
  This project is about the development of the tic tac toe game using javaScript, CSS and HTML. This game is for two players. One player plays X and another player plays O. If a player gets three marks in a row horizontally, vertically or diagonally, then that player wins the game.
- ------------------------------------------------------------------------------------
+
 <h3> 💰 My keywords :<h3>
 
 - Two player : X & O
@@ -19,7 +19,7 @@
 - Winner message!
 - Reset button. 
 
-<img src="/assetc/plan.png" alt="plan" class="img1">
+<img src="https://1drv.ms/i/s!AtUeahh_23T-gUa7n9oBQ7peLSvv?e=dGgmjA" alt="plan" class="img1">
 
 <h2> ✏ My planning :</h2>
 
