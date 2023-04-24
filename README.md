@@ -19,7 +19,7 @@
 - Winner message!
 - Reset button. 
 
-<img src="https://1drv.ms/i/s!AtUeahh_23T-gUa7n9oBQ7peLSvv?e=dGgmjA" alt="plan" class="img1">
+<img src="image/2023-04-24 (1).png"alt="plan" class="">
 
 <h2> ✏ My planning :</h2>
 
