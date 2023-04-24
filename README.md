@@ -19,7 +19,7 @@
 - Winner message!
 - Reset button. 
 
-<img src="https://user-images.githubusercontent.com/129059226/233876900-f2162871-b01d-4537-ac65-fc3a0b8083a5.png" width="500" height="400">
+<img src="https://user-images.githubusercontent.com/129059226/233876900-f2162871-b01d-4537-ac65-fc3a0b8083a5.png" width="500" height="400"  text-align: center;>
 
 
 <h2> ✏ My planning :</h2>
